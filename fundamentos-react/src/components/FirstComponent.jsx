@@ -1,5 +1,6 @@
 import React from 'react';
 
+// componente baseado em função.
 export default (props) =>
     <div>
         <h1>{props.value}</h1>

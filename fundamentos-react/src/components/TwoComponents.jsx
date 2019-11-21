@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Componentes baseados em funções.
 const CompA = props =>
     <h1>Primeiro diz: {props.value}</h1>
 
