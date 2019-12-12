@@ -1,5 +1,5 @@
 import React from 'react'
-import Members from './Members'
+// import Members from './Members'
 import {filhosComProps} from '../utils/utils'
 
 // internamente no Javascript, uma classe é uma função.

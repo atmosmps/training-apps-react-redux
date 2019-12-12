@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Curso
+
+- link do projeto original com todos os excercicios: [https://github.com/cod3rcursos/curso-react-redux](https://github.com/cod3rcursos/curso-react-redux)
+
+Comunicação direta entre componentes: o componente pai tem uma referencia do componente filho passando diretamente as propriedades para ele.
+
+Comunicação indireta entre componentes é feita utilizando Call Back.
+
 ## Available Scripts
 
 In the project directory, you can run:
