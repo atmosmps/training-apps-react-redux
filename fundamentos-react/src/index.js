@@ -14,11 +14,16 @@ import React from 'react'
 
 // import ComponenteComfuncao from './components/ComponenteFuncional'
 
+import Contador from './components/Contador'
+
 // ReactDOM.render(<h1>Olá mundo</h1>, elemento)
+
 const elemento = document.getElementById('root')
 
 ReactDOM.render(
     <div>
+
+        <Contador numeroInicial={10}></Contador>
 
         {/* <ComponentePai></ComponentePai> */}
 
