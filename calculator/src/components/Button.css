@@ -1,4 +1,5 @@
 :root {
+    /* "--" cria variaveis no css */
     --bg-button: #f0f0f0;
     --border-button: solid 1px #888;
 }
@@ -10,4 +11,28 @@
     border-right: var(--border-button);
     border-bottom: var(--border-button);
     outline: none;
+}
+
+/* cria efeito de sombra no clique do botão (:active, chama a pseudo classe 'active' no css) */
+.button:active {
+    background-color: #ccc;
+}
+
+/* Quando o botão ocupar dois espaços */
+.button.double {
+    grid-column: span 2;
+}
+
+/* Quando o botão ocupar três espaços */
+.button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: #fa8231;
+    color: white;
+}
+
+.button.operation:active {
+    background-color: #fa8231cc;
 }
