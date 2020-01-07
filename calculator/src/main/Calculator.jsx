@@ -30,7 +30,46 @@ export default class Calculator extends Component {
     }
 
     setOperation(operation) {
-        console.log(operation)
+        if (this.state.current === 0 ) {
+            this.setState({operation, current: 1, clearDisplay: true})
+        } else {
+            // Indica que o usuário clicou no "igual";
+            const equals = operation === '=';
+            const currentOperation = this.state.operation;
+
+            const values = [...this.state.values];
+
+            switch (currentOperation !== null) {
+                case currentOperation === '+':
+                    values[0] = values[0] + values[1];
+                    break;
+                
+                case currentOperation === '-':
+                    values[0] = values[0] - values[1];
+                    break;
+
+                case currentOperation === '*':
+                    values[0] = values[0] * values[1];
+                    break;
+
+                case currentOperation === '/':
+                    values[0] = values[0] / values[1];
+                    break;
+
+                default:
+                    break;
+            }
+
+            values[1] = 0
+
+            this.setState({
+                displayValue: values[0],
+                operation: equals ? null : operation,
+                current: equals ? 0 : 1,
+                clearDisplay: !equals,
+                values
+            })
+        }
     }
 
     addDigit(n) {
@@ -76,7 +115,7 @@ export default class Calculator extends Component {
                 <Button label="+" click={this.setOperation} operation/>
                 <Button label="0" click={this.addDigit} double/>
                 <Button label="." click={this.addDigit}/>
-                <Button label="=" click={this.addDigit} operation/>
+                <Button label="=" click={this.setOperation} operation/>
             </div>
         )
     }
