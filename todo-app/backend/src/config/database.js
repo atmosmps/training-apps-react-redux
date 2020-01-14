@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // A API de prmisse do Mongoose vai usar a API de Promisses global do Node
-mongoose.Promise = global.Promisse
+mongoose.Promisse = global.Promisse
 module.exports = mongoose.connect('mongodb://localhost/todoapp')
 
 /**
